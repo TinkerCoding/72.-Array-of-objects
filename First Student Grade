@@ -1,1 +1,9 @@
-
+/**
+ * @typedef {{startYear: Number, grade: Number}} Course
+ * @typedef {{name: String, age: Number, learnProgramming: Course}} Student
+ *
+ * @param {Student[]} students
+ */
+function getFirstStudentGrade(students) {
+     return students[0].learnProgramming.grade;
+}
