@@ -4,6 +4,6 @@
 
 function getLastUserFullName(users) {
      let lastUser = users[users.length - 1];
-     return `${lastUser.fitstName} ${lastUser.lastName}`;
+     return `${lastUser.firstName} ${lastUser.lastName}`;
  }
 
