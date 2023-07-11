@@ -1,0 +1,8 @@
+/**
+ * @param {{: string, description: String, isCompleted: Boolean}[]} courses
+ */
+
+function getFirstCouseName(courses) {
+return courses[0].name;
+}
+
