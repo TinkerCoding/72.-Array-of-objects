@@ -1,0 +1,9 @@
+/**
+ * @param {{firstName: String, lastName: String, age: Number}[]} users
+ */
+
+function getLastUserFullName(users) {
+     let lastUser = users[users.length - 1];
+     return `${lastUser.fitstName} ${lastUser.lastName}`;
+ }
+
