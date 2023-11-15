@@ -1,0 +1,7 @@
+function getSumGrades(grades) {
+    let sum = 0;
+    grades.forEach(function(grade) {
+       sum = sum + grade.grade;
+    });
+    return sum;
+}
