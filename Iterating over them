@@ -1,0 +1,16 @@
+let users = [
+  {
+    firstName: "Sam",
+    lastName: "Blue",
+    age: 21,
+  },
+  {
+    firstName: "Charlie",
+    lastName: "Bon",
+    age: 38,
+  }
+];
+
+users.forEach(function(user) {
+    console.log(user);  // one object at a time
+});
