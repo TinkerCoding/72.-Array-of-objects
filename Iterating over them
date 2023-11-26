@@ -1,3 +1,5 @@
+/* Let's take the same example as before and try to iterate on it, using the .forEach() method: */
+
 let users = [
   {
     firstName: "Sam",
@@ -12,5 +14,68 @@ let users = [
 ];
 
 users.forEach(function(user) {
-    console.log(user);  // one object at a time
+    console.log(user); // one object at a time
 });
+
+/* This will log to the console the first object {firstName: " Sam", lastName: "Blue", age: 21}, and then the second object 
+ {firstName: "Charlie", lastName: "Bon", age: 38}. */
+
+/* Say you wanted to log the firstName, then you have to access the .firstName property on the user object: */
+
+users.forEach(function(user) {
+    console.log(user.firstName);
+});
+
+*/ This will log to the console the first firstName "Sam" and then the second one which is "Charlie". /*
+
+//// Always start with console.log ////
+
+/* It's important to always start with a console.log inside the .forEach, especially for arrays of objects as it helps you visualize the transition from
+ array of objects to object as well as visualize the object structure. */
+
+
+//// Transforming with .map() ////
+
+/* It's also possible to use .map() on arrays of objects. This may be a little bit trickier to understand but it's quite powerful. Let's say we've got the
+following recipes array of objects:
+
+let recipes = [
+ { 
+   title: "Pasta pesto",
+   preparationMinutes: 30,
+   rating: 4.5
+ },
+ { 
+   title: "lasagna",
+   preparationMinutes: 45,
+   rating: 3.9
+ }
+];
+
+/* and we'd like to create an array of all the recipes names. The end result will look like this: ["Pasta pesto", "Lasagna"].
+
+This is a transformation where we transform every object from the array into a string, which is the title of the recipe.
+
+So we need to find a function that allows us to transform: {title: "Pasta pesto", preparationMinutes: 30, rating: 4.5} to "Pasta pesto".
+
+The code is simpler than you think, let's take a look: */
+
+let titles = recipes.map(function(recipe) {
+    console.log(recipe);  // helps us visualize 
+    return recipe.title;
+});
+console.log(titles); // ["Pasta pesto", "Lasagna"]
+
+/* The transformation is that we receive a recipe object and we return the title with recipe.title!
+   Don't worry if it's not too clear, you will have a chance to practice and visualize this concept */
+
+//// Recap ////
+
+/* 
+
+- When you iterate over an array of objects, you will get an object inside the callback.
+
+- It's important to always start with a console.log inside the .forEach, especially for arrays of objects as it helps you visualize the transition
+from array of objects to object as as visualize the object structure.
+
+- You can use .map() to convert an array of objects into an array of specific entries for example an array into an array of full names.
